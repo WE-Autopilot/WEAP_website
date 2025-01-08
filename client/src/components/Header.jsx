@@ -2,7 +2,7 @@ import '../stylesheets/Header.css'
 import { Link } from "react-router-dom"
 
 function Header() {
-    
+    //comment
     return (
         <header className="Header">
             <img src="/Logo.png" alt="Logo" className="logo" />
