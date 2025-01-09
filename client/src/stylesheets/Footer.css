@@ -1,0 +1,23 @@
+.Footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+}
+
+#Address {
+  font-size: 24px;
+  font-weight: 400;
+  color: #5632a6;
+}
+
+#FooterLeft {
+  width: 33%;
+}
+
+#SocialTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #5632a6;
+}
