@@ -14,10 +14,21 @@ function Footer() {
       <div id="Socials">
         <p id="SocialTitle">Socials</p>
         <div id="SocialImages">
-          <img src="/socials/linktree.png" width="52px"></img>
-          <img src="/socials/instagram.png" width="40px"></img>
-          <img src="/socials/linkedin.png" width="46px"></img>
-          <img src="/socials/discord.png" width="53px"></img>
+          <a href="https://linktr.ee/we.autopilot" id="LinkTree">
+            <img src="/socials/linktree.png" width="52px"></img>
+          </a>
+          <a href="https://www.instagram.com/we.autopilot" id="Instagram">
+            <img src="/socials/instagram.png" width="40px"></img>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/we-autopilot-club"
+            id="LinkedIn"
+          >
+            <img src="/socials/linkedin.png" width="46px"></img>
+          </a>
+          <a href="https://discord.com/invite/HuJCHCSVB2" id="Discord">
+            <img src="/socials/discord.png" width="53px"></img>
+          </a>
         </div>
       </div>
     </footer>

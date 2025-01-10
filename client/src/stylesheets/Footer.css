@@ -50,6 +50,18 @@
   align-self: center;
 }
 
+#LinkTree {
+  margin-top: -10px;
+}
+
+#Instagram {
+  margin-top: 3px;
+}
+
+#Discord {
+  margin-top: -3px;
+}
+
 /*Mobile*/
 @media only screen and (max-width: 850px) {
   .Footer {
