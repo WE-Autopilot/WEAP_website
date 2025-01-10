@@ -1,5 +1,4 @@
 /*Footer is divided into 3 columns, the third being empty space*/
-
 .Footer {
   width: 100%;
   display: flex;
@@ -8,22 +7,23 @@
   bottom: 0;
 }
 
+#FooterLeft {
+  width: 33%;
+}
+
 #FooterLogo {
-  padding-left: 40px;
-  padding-top: 40px;
+  padding-left: 11.5%;
+  padding-top: 9%;
   margin-bottom: -17px;
 }
 
 #Address {
-  padding-left: 40px;
+  padding-left: 9%;
   padding-bottom: 30px;
   font-size: 24px;
   font-weight: 400;
   color: #5632a6;
-}
-
-#FooterLeft {
-  width: 33%;
+  line-height: 120%;
 }
 
 #Socials {
@@ -48,4 +48,42 @@
 #SocialImages > img {
   /* prevents image squash*/
   align-self: center;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 850px) {
+  .Footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #FooterLeft {
+    width: 100%;
+  }
+
+  #FooterLogo {
+    padding-left: 0;
+  }
+
+  #Address {
+    padding-bottom: 0;
+    padding-left: 0;
+    margin-bottom: -10px;
+  }
+
+  #TextBreak {
+    display: none;
+  }
+
+  #Socials {
+    width: 100%;
+  }
+
+  #SocialTitle {
+    padding-top: 0;
+  }
+
+  #SocialImages {
+    padding-bottom: 5%;
+  }
 }
