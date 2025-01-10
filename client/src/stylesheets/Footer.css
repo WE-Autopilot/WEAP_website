@@ -1,3 +1,5 @@
+/*Footer is divided into 3 columns, the third being empty space*/
+
 .Footer {
   width: 100%;
   display: flex;
@@ -6,7 +8,15 @@
   bottom: 0;
 }
 
+#FooterLogo {
+  padding-left: 40px;
+  padding-top: 40px;
+  margin-bottom: -17px;
+}
+
 #Address {
+  padding-left: 40px;
+  padding-bottom: 30px;
   font-size: 24px;
   font-weight: 400;
   color: #5632a6;
@@ -16,8 +26,26 @@
   width: 33%;
 }
 
+#Socials {
+  width: 33%;
+  text-align: center;
+}
+
 #SocialTitle {
   font-size: 24px;
   font-weight: 700;
   color: #5632a6;
+  padding-top: 40px;
+}
+
+#SocialImages {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+#SocialImages > img {
+  /* prevents image squash*/
+  align-self: center;
 }
