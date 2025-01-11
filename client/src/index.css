@@ -24,6 +24,7 @@ a:hover {
 }
 
 body {
+  height: auto;
   margin: 0;
   overflow-x: hidden;
   background: url("/Background_Gradient.svg") no-repeat center center fixed;
