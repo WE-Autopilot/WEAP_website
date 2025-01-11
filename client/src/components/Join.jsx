@@ -1,4 +1,3 @@
-import React from "react";
 import "../stylesheets/Join.css";
 
 // Boilerplate code for the Join component

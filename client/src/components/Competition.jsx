@@ -1,4 +1,3 @@
-import React from "react";
 import "../stylesheets/Competition.css";
 
 // Boilerplate code for the Competition component

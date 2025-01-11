@@ -1,4 +1,3 @@
-import React from "react";
 import "../stylesheets/About.css";
 
 // Boilerplate code for the About component
