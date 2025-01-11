@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Sponsors from "./components/Sponsors";
 import About from "./components/About";
 import Join from "./components/Join";
 import "./App.css";
 import Competition from "./components/Competition";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
         <Route path="/join" element={<Join />} />
         <Route path="/competition" element={<Competition />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
