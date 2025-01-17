@@ -1,0 +1,57 @@
+.Sponsors{
+    background-color: #E1E1E1;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+.heading{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58.09px;
+    color:#5632A6 ;
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sponsor{
+    position: relative;
+    margin: 20px 0;
+}
+
+.roboshop-logo{
+    width: 50%;
+    max-width: 866px;
+    height: auto;
+}
+
+.digikey-logo{
+    width: 40%;
+    max-width: 591px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .roboshop-logo {
+        width: 80%;
+    }
+
+    .digikey-logo {
+        width: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .roboshop-logo {
+        width: 90%;
+    }
+
+    .digikey-logo {
+        width: 70%;
+    }
+}
