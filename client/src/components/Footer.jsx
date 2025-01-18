@@ -7,7 +7,7 @@ function Footer() {
         <img src="/socials/footerlogo.png" id="FooterLogo" width="215px"></img>
         <p id="Address">
           1151 Richmond St,
-          <br id="TextBreak" />
+          <br/>
           London, ON N6A 3K7
         </p>
       </div>
