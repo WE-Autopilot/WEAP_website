@@ -4,6 +4,13 @@ import Header from "./components/Header"
 import Home from "./components/Home"
 import './App.css'
 
+
+
+
+
+import Sponsors from "./components/Sponsors"
+
+
 function App() {
 
 
@@ -13,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/about"/>
-        <Route path="/sponsors" />
+        <Route path="/sponsors" element={<Sponsors />}/>
         <Route path="/join" />
         <Route path="/competition" />
 

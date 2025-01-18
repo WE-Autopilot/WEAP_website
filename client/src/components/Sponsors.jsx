@@ -1,4 +1,4 @@
-import '../stylesheets/Header.css'
+import '../stylesheets/Sponsors.css'
 
 function Sponsors() {
 
@@ -7,10 +7,10 @@ function Sponsors() {
             <h1 className = "heading">Our Sponsors</h1>
             <div className = "logos">
                 <div className = "sponsor">
-                    <img src = "client\public\sponsors.svg\ROBOSHOP_LOGO 1.svg" alt = "RobotShop Logo" className = "roboshop-logo"/>
+                    <img src = "\sponsors.svg\ROBOSHOP_V2 1.svg" alt = "RobotShop Logo" className = "roboshop-logo"/>
                 </div>
                 <div className = "sponsor">
-                    <img src = "client\public\sponsors.svg\digikey 1.svg" alt = "Digikey" className = "digikey-logo"/>
+                    <img src = "\sponsors.svg\digikey 1.svg" alt = "Digikey" className = "digikey-logo"/>
                 </div>
             </div>
         </div>
