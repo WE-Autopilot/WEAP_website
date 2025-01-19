@@ -1,3 +1,4 @@
+
 import '../stylesheets/Sponsors.css'
 
 function Sponsors() {

@@ -21,4 +21,52 @@
 }
 
 .nav{
-}  
+} 
+
+.menu-icon {
+    display: none; 
+}
+
+.fimenu{
+    background: transparent;  
+    border: none;
+    outline: none;  
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.fimenu:focus, .fimenu:active {
+    outline: none;
+    border: none;
+    box-shadow: none; 
+}
+
+@media only screen and (max-width: 850px){
+    
+    .menu-icon {
+        display: block; 
+        border: none;
+        outline: none;
+    }
+    
+    .nav .links {
+        display: none;
+        flex-direction: column;
+        /* background:#e1e1e1; */
+        background:white;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav.open .links {
+        display: flex;
+    }
+}
