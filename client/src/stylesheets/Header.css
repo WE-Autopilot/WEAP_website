@@ -57,7 +57,7 @@
     display: none;
     flex-direction: column;
     /* background:#e1e1e1; */
-    background: #e1e1e1;
+    background-color: rgba(225, 225, 225, 0.95);
     position: absolute;
     top: 100px;
     left: 0;
@@ -68,6 +68,8 @@
 
   .nav.open .links {
     display: flex;
+    /* display on top */
+    z-index: 99;
   }
 
   .links li {
