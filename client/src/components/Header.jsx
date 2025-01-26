@@ -1,6 +1,6 @@
 import '../stylesheets/Header.css'
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, memo } from "react"
 function Header() {
     
     const [isMenu, setMenu] = useState(false)
@@ -53,4 +53,4 @@ function Header() {
 }
 
 
-export default Header;
+export default memo(Header);

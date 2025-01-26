@@ -1,5 +1,5 @@
 import "../stylesheets/Footer.css";
-
+import { memo } from "react"
 function Footer() {
   return (
     <footer className="Footer">
@@ -35,4 +35,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default memo(Footer);
