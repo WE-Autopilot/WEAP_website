@@ -1,72 +1,78 @@
-.Header{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* height: auto; */
+.Header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* height: auto; */
 }
 
-.links{
-    list-style: none;
-    font-size: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+.links {
+  list-style: none;
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-.links li{
-    margin-right: 4em;
+.links li {
+  margin-right: 4em;
 }
 
-.nav{
-} 
+.nav {
+}
 
 .menu-icon {
-    display: none; 
+  display: none;
 }
 
-.fimenu{
-    background: transparent;  
-    border: none;
-    outline: none;  
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
+.fimenu {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
 }
 
-.fimenu:focus, .fimenu:active {
+.fimenu:focus,
+.fimenu:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 850px) {
+  .menu-icon {
+    display: block;
+    border: none;
     outline: none;
-    border: none;
-    box-shadow: none; 
-}
+  }
 
-@media only screen and (max-width: 850px){
-    
-    .menu-icon {
-        display: block; 
-        border: none;
-        outline: none;
-    }
-    
-    .nav .links {
-        display: none;
-        flex-direction: column;
-        /* background:#e1e1e1; */
-        background:white;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
+  .nav .links {
+    display: none;
+    flex-direction: column;
+    /* background:#e1e1e1; */
+    background-color: rgba(225, 225, 225, 0.95);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
 
-    .nav.open .links {
-        display: flex;
-    }
+  .nav.open .links {
+    display: flex;
+    /* display on top */
+    z-index: 99;
+  }
+
+  .links li {
+    margin-right: 0em;
+  }
 }
