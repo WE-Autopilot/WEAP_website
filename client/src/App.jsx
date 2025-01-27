@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Gradient } from './assets/Gradient.js';
+import { Gradient } from "./assets/Gradient.js";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
@@ -10,18 +10,17 @@ import Join from "./components/Join";
 import "./App.css";
 import Competition from "./components/Competition";
 
-
 function App() {
-  const gradient = new Gradient()
-  gradient.initGradient('#gradient-canvas')
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient("#gradient-canvas");
+  }, []);
 
   return (
-
     <div className="app-container">
-
-    <div id="animated-bg">
-      <canvas id="gradient-canvas" data-transition-in></canvas>
-    </div>
+      <div id="animated-bg">
+        <canvas id="gradient-canvas" data-transition-in></canvas>
+      </div>
 
       <div className="content">
         <Router>
@@ -37,7 +36,6 @@ function App() {
         </Router>
       </div>
     </div>
-
   );
 }
 
