@@ -3,12 +3,22 @@ import "../stylesheets/Home.css";
 function Home() {
   return (
     <>
-      <h1>WEAP</h1>
-      <h1>WEAP</h1>
-      <h1>WEAP</h1>
-      <h1>WEAP</h1>
-      <h1>WEAP</h1>
-      <h1>WEAP</h1>
+    <div className="logo-card">
+      <div className="logo-align">
+
+        <div className="logo">
+          <h2>WE</h2>
+          <img src="Logo.png" id="Logo"></img>
+          <h2>AUTOPILOT</h2>
+        </div>
+
+
+        <div className="line"></div>
+        <p>Western Engineering AutoPliot Club</p>
+
+      </div>
+    </div>
+
     <section className="intro-container">
       <div className="content">
         <h2>What is WE AutoPilot?</h2>

@@ -7,7 +7,7 @@ function Header() {
 
     return (
         <header className="Header">
-            <img src="/Logo.png" alt="Logo" className="logo" />
+            <img src="/headerlogo.png" alt="Logo" className="logo" />
             
             <div className="menu-icon">
                 <button className="fimenu" onClick={ () => {setMenu(!isMenu)}}>
