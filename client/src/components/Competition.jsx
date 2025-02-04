@@ -4,7 +4,7 @@ import "../stylesheets/Competition.css";
 function Competition() {
   return (
     <div className="competition-container">
-      <h1>Competition</h1>
+      <h1>WIP, come back soon!</h1>
     </div>
   );
 }

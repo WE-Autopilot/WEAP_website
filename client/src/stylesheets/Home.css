@@ -1,7 +1,7 @@
 .intro-container {
-  background-color: #e1e1e1;
+  background: rgba(213, 208, 208, 0.6);
   text-align: left; /* Keep text alignment to the left */
-  margin-top: 15%;
+  margin-top: 12%;
   margin-bottom: 20%;
   padding: 4%;
   box-shadow: 0px 4px 2.3px 4px rgba(0, 0, 0, 0.25),
@@ -15,14 +15,18 @@
 }
 .intro-container h2 {
   font-size: 4rem;
-  color: #5632a6;
   margin-bottom: 1rem;
   font-weight: bold;
+  background: linear-gradient(to right, #6b047b, #d49b27);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+
 }
 
 .intro-container p {
   font-size: 3rem;
-  color: #333333;
   line-height: 1;
   max-width: 100rem;
 }
@@ -35,13 +39,19 @@
   .intro-container p {
     font-size: 1.5rem;
   }
+
+  .logo h2, 
+  .logo-align p,
+  .line {
+    display: none;
+  }
 }
 
 .logo-card{
   height: 50%;
   width: 100%;
   color: #FFDE38;
-  margin-top: 15%;
+  margin-top: 12%;
 }
 
 .logo-align{
@@ -54,7 +64,9 @@
 }
 
 .logo-align{
-  font-size: 24px;
+  font-weight: 700; /* Bold */
+  font-size: 36px;
+  font-style: italic;
 }
 
 .logo{
@@ -62,26 +74,28 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 81px;
 }
 
-.logo svg {
-  height: 50px;
+.logo img {
+  /* height: 50px;
   width: auto;
-  vertical-align: middle;
+  vertical-align: middle; */
+  transform: scale(1.5);
 }
 
 .logo h2{
   color: #FFDE38;
-  font-size: 64px;
+  font-size: 89px;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 700;
   font-style: italic;
+  margin-bottom: 4%;
 }
 
 .line{
   margin-top: 0;
-  width: 900px;
+  width: 970px;
   height: 5px;
   background: #FFDE38;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
