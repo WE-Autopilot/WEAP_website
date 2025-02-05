@@ -8,7 +8,7 @@ function Home() {
 
         <div className="logo">
           <h2>WE</h2>
-          <img src="Logo.png" id="Logo"></img>
+          <img src="Logo_trimmed.svg" id="Logo"></img>
           <h2>AUTOPILOT</h2>
         </div>
 

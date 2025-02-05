@@ -5,7 +5,7 @@ import "../stylesheets/About.css";
 function About() {
   return (
     <div className="about-container">
-      <h1>About WEAP</h1>
+      <h1>WIP, come back soon!</h1>
     </div>
   );
 }

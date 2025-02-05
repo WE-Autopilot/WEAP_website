@@ -57,7 +57,8 @@
     display: none;
     flex-direction: column;
     /* background:#e1e1e1; */
-    background-color: rgba(225, 225, 225, 0.95);
+    background: rgba(213, 208, 208, 0.9);
+    box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
     position: absolute;
     top: 100px;
     left: 0;

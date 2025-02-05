@@ -1,5 +1,5 @@
 .Sponsors {
-  background-color: #e1e1e1;
+  background: rgba(213, 208, 208, 0.6);
   width: 100%;
   text-align: center;
   margin-top: 10%;
@@ -16,7 +16,13 @@
   font-weight: 400;
   font-size: 48px;
   line-height: 58.09px;
-  color: #5632a6;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(to right, #6b047b, #d49b27);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .logos {

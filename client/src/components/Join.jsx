@@ -5,7 +5,7 @@ import "../stylesheets/Join.css";
 function Join() {
   return (
     <div className="join-container">
-      <h1>Join</h1>
+      <h1>WIP, come back soon!</h1>
     </div>
   );
 }
