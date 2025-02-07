@@ -2,6 +2,7 @@ import "../stylesheets/Home.css";
 
 function Home() {
   return (
+    //this is a comment
     <>
     <div className="logo-card">
       <div className="logo-align">
@@ -11,7 +12,7 @@ function Home() {
           <img src="Logo_trimmed.svg" id="Logo"></img>
           <h2>AUTOPILOT</h2>
         </div>
-
+        
 
         <div className="line"></div>
         <p>Western Engineering AutoPilot Club</p>
