@@ -14,7 +14,7 @@ function Home() {
 
 
         <div className="line"></div>
-        <p>Western Engineering AutoPliot Club</p>
+        <p>Western Engineering AutoPilot Club</p>
 
       </div>
     </div>
