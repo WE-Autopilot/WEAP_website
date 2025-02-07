@@ -2,7 +2,6 @@ import "../stylesheets/Home.css";
 
 function Home() {
   return (
-    //this is a comment
     <>
     <div className="logo-card">
       <div className="logo-align">
