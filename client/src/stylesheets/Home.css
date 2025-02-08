@@ -9,7 +9,7 @@
 }
 
 .intro-container .content {
-  max-width: 800px; /* Keep a manageable max width */
+  max-width: 800px;
   text-align: left;
   max-width: fit-content;
 }
@@ -30,70 +30,74 @@
   max-width: 100rem;
 }
 
+/* Remove the rule that hides logo text for smaller screens */
 @media only screen and (max-width: 850px) {
-  .intro-container h2 {
-    font-size: 3rem;
-  }
+    .intro-container h2 {
+      font-size: 3rem;
+    }
 
-  .intro-container p {
-    font-size: 1.5rem;
-  }
+    .intro-container p {
+      font-size: 1rem;
+    }
 
-  .logo h2, 
-  .logo-align p,
-  .line {
-    display: none;
+
+    .logo h2,
+    .line {
+      display: none;
+    }
   }
-}
 
 .logo-card{
-  height: 50%;
-  width: 100%;
-  color: #FFDE38;
-  margin-top: 12%;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    width: 100%;
+    color: #FFDE38;
+    margin-top: 10%;
+  }
 
-.logo-align{
-  display: flex;
-  /* justify-content: center; */
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0 auto; 
-  width: fit-content;
-}
+  .logo-align{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+  .logo-align p{
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Jura", serif;
+    text-align: center;
+  }
 
-.logo-align p{
-  font-weight: 700; /* Bold */
-  font-size: 36px;
-  font-family: "Jura", serif; 
-  /* font-style: italic; */
-}
+  .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
 
-.logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 81px;
-}
+  .logo img {
+    transform: scale(0.8);
+    padding-top: 75px;
+  }
 
-.logo img {
-  /* height: 50px;
-  width: auto;
-  vertical-align: middle; */
-  transform: scale(1.5);
-}
+  .logo h2{
+    color: #FFDE38;
+    font-size: 89px;
+    margin-bottom: 1%;
+    text-align: center;
+  }
 
-.logo h2{
-  color: #FFDE38;
-  font-size: 89px;
-  margin-bottom: 4%;
-}
-
-.line{
-  margin-top: 0;
-  width: 970px;
-  height: 5px;
-  background: #FFDE38;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);  
-}
+  .line{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 970px;
+    height: 5px;
+    background: #FFDE38;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+  }
+  
