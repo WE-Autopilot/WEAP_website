@@ -16,7 +16,6 @@
 .intro-container h2 {
   font-size: 4rem;
   margin-bottom: 1rem;
-  font-weight: bold;
   background: linear-gradient(to right, #6b047b, #d49b27);
   background-clip: text;
   -webkit-background-clip: text;
@@ -63,10 +62,11 @@
   width: fit-content;
 }
 
-.logo-align{
+.logo-align p{
   font-weight: 700; /* Bold */
   font-size: 36px;
-  font-style: italic;
+  font-family: "Jura", serif; 
+  /* font-style: italic; */
 }
 
 .logo{
@@ -87,9 +87,6 @@
 .logo h2{
   color: #FFDE38;
   font-size: 89px;
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  font-style: italic;
   margin-bottom: 4%;
 }
 

@@ -376,7 +376,7 @@ class Gradient {
                       type: "vec2"
                   }),
                   noiseSpeed: new this.minigl.Uniform({
-                      value: 5e-6
+                      value: 4e-6
                   })
               },
               type: "struct"
@@ -400,10 +400,10 @@ class Gradient {
                       value: this.amp
                   }),
                   noiseSpeed: new this.minigl.Uniform({
-                      value: 10
+                      value: 6
                   }),
                   noiseFlow: new this.minigl.Uniform({
-                      value: 3
+                      value: 3.5
                   }),
                   noiseSeed: new this.minigl.Uniform({
                       value: this.seed
@@ -434,10 +434,10 @@ class Gradient {
                   type: "vec2"
               }),
               noiseSpeed: new this.minigl.Uniform({
-                  value: 11 + .3 * e
+                  value: 6 + .2 * e
               }),
               noiseFlow: new this.minigl.Uniform({
-                  value: 6.5 + .3 * e
+                  value: 4 + .2 * e
               }),
               noiseSeed: new this.minigl.Uniform({
                   value: this.seed + 10 * e
