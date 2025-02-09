@@ -14,7 +14,10 @@ function Home() {
         
 
         <div className="line"></div>
+        <div className="logo-align">
         <p>Western Engineering AutoPilot Club</p>
+        </div>
+        
 
       </div>
     </div>
