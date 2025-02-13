@@ -64,19 +64,29 @@ function Header() {
       <nav ref={navRef} className={`nav ${isMenu ? "open" : ""}`}>
         <ul className="links">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => setMenu(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" onClick={() => setMenu(false)}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/sponsors">Sponsors</Link>
+            <Link to="/sponsors" onClick={() => setMenu(false)}>
+              Sponsors
+            </Link>
           </li>
           <li>
-            <Link to="/join">Join</Link>
+            <Link to="/join" onClick={() => setMenu(false)}>
+              Join
+            </Link>
           </li>
           <li>
-            <Link to="/competition">Competition</Link>
+            <Link to="/competition" onClick={() => setMenu(false)}>
+              Competition
+            </Link>
           </li>
         </ul>
       </nav>
