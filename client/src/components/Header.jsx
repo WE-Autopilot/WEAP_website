@@ -4,12 +4,22 @@ import { useState, useRef, memo } from "react";
 import onClickOutside from "../hooks/onClickOutside";
 function Header() {
   const [isMenu, setMenu] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const navRef = useRef();
+
+  const handleMenuClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setMenu(false);
+      setIsClosing(false);
+    }, 500);
+  };
 
   onClickOutside(navRef, () => {
     console.log("clicked outside");
-    if (isMenu) setMenu(false);
+    if (isMenu) handleMenuClose();
   });
+
   return (
     <header className="Header">
       <img src="/headerlogo.png" alt="Logo" className="logo" />
@@ -23,6 +33,7 @@ function Header() {
         >
           {isMenu ? (
             <svg
+              className={`menu-icon menuRotate ${isMenu ? "active" : ""}`}
               stroke="currentColor"
               fill="currentColor"
               strokeWidth="0"
@@ -34,6 +45,7 @@ function Header() {
               outline="none"
             >
               <path
+                className="line1"
                 fill="none"
                 stroke="#242424"
                 strokeWidth="3"
@@ -42,6 +54,7 @@ function Header() {
             </svg>
           ) : (
             <svg
+              className={`menu-icon menuRotate ${isMenu ? "active" : ""}`}
               stroke="#242424"
               fill="none"
               strokeWidth={2}
@@ -61,30 +74,33 @@ function Header() {
         </button>
       </div>
 
-      <nav ref={navRef} className={`nav ${isMenu ? "open" : ""}`}>
+      <nav
+        ref={navRef}
+        className={`nav ${isMenu ? "open" : ""} ${isClosing ? " closing" : ""}`}
+      >
         <ul className="links">
           <li>
-            <Link to="/" onClick={() => setMenu(false)}>
+            <Link to="/" onClick={handleMenuClose}>
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about" onClick={() => setMenu(false)}>
+            <Link className="nav-link" to="/about" onClick={handleMenuClose}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/sponsors" onClick={() => setMenu(false)}>
+            <Link to="/sponsors" onClick={handleMenuClose}>
               Sponsors
             </Link>
           </li>
           <li>
-            <Link to="/join" onClick={() => setMenu(false)}>
+            <Link to="/join" onClick={handleMenuClose}>
               Join
             </Link>
           </li>
           <li>
-            <Link to="/competition" onClick={() => setMenu(false)}>
+            <Link to="/competition" onClick={handleMenuClose}>
               Competition
             </Link>
           </li>
