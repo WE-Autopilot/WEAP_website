@@ -3,6 +3,7 @@ import { useEffect } from "react";
 function onClickOutside(ref, handler) {
   useEffect(() => {
     const listener = (event) => {
+      if (event.target.closest(".fimenu")) return;
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
