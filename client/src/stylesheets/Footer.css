@@ -21,7 +21,7 @@
   padding-bottom: 30px;
   font-size: 24px;
   font-weight: 400;
-  color: #6b047b; 
+  color: #6b047b;
   line-height: 120%;
 }
 
@@ -34,7 +34,7 @@
   font-size: 24px;
   font-weight: 700;
   font-family: "Jura", serif;
-  color: #6b047b; 
+  color: #6b047b;
   padding-top: 40px;
   background: linear-gradient(to right, #6b047b, #d49b27);
   -webkit-background-clip: text;
@@ -48,6 +48,26 @@
   flex-direction: row;
   gap: 40px;
   justify-content: center;
+  align-items: center;
+}
+#SocialImages a {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#SocialImages a:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+#LinkTree:hover {
+  filter: drop-shadow(0 0 8px #e38648);
+}
+#Instagram:hover {
+  filter: drop-shadow(0 0 8px #e130b8);
+}
+#LinkedIn:hover {
+  filter: drop-shadow(0 0 8px #0a66c2);
+}
+#Discord:hover {
+  filter: drop-shadow(0 0 8px #9524d6);
 }
 
 #SocialImages > img {
@@ -56,16 +76,12 @@
 }
 
 #LinkTree {
-  margin-top: -5px;
-  transform: scale(0.8);
 }
 
 #Instagram {
-  margin-top: 3px;
 }
 
 #Discord {
-  margin-top: -1px;
 }
 
 /*Mobile*/
@@ -87,9 +103,9 @@
     /* padding-bottom: 0;
     padding-left: 0;
     margin-bottom: -10px; */
-    padding: 5px 0; 
-    margin-bottom: 5px; 
-    line-height: 1.4; 
+    padding: 5px 0;
+    margin-bottom: 5px;
+    line-height: 1.4;
   }
 
   #TextBreak {
