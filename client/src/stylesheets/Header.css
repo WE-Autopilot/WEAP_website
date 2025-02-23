@@ -40,19 +40,15 @@ li::after,
 li::before {
   content: "";
   position: absolute;
+
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #601a86, #9708e4, #dc9a0b, #e8bd0e);
   bottom: -5px;
   left: 0;
   transform: scaleX(0);
-  transform-origin: right;
+  transform-origin: middle;
   transition: transform 0.4s ease-out;
-}
-
-li::before {
-  top: -5px; /* Changed from 5px to -5px to position above the text */
-  transform-origin: left;
 }
 
 li:hover::after,
