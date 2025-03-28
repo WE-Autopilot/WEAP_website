@@ -30,16 +30,16 @@ function TitleUpdater() {
 }
 
 function App() {
-  useEffect(() => {
-    const gradient = new Gradient();
-    gradient.initGradient("#gradient-canvas");
-  }, []);
+  // useEffect(() => {
+  //   const gradient = new Gradient();
+  //   gradient.initGradient("#gradient-canvas");
+  // }, []);
 
   return (
     <div className="app-container">
-      <div id="animated-bg">
+      {/* <div id="animated-bg">
         <canvas id="gradient-canvas" data-transition-in></canvas>
-      </div>
+      </div> */}
 
       <div className="content">
         <Router>
