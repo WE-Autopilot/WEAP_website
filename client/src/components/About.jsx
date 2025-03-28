@@ -9,7 +9,6 @@ import Member5 from "../assets/Member5.webp";
 import { useEffect, useRef } from "react";
 import { use } from "react";
 
-// Boilerplate code for the About component
 
 function About() {
   const teamMembers = [
@@ -58,7 +57,6 @@ function About() {
       </div>
       
       <div className="about-content">
-        <h1>About Us</h1>
         
         <div className="cards-container">
           {/* Card 1 */}
