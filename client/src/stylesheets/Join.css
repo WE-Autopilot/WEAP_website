@@ -3,6 +3,114 @@
   padding: 2rem;
   color: azure;
   display: flex;
-  justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+p {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.join-info {
+  padding-bottom: 3vh;
+}
+
+.join-info-box {
+  border-radius: 15px;
+  background: #73ad21;
+  width: 70vw;
+  padding-top: 0.5vh;
+  padding-bottom: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  text-align: center;
+}
+
+.header-line-break {
+  border: 1px solid white;
+  width: 262px;
+}
+
+.team-info {
+  text-align: center;
+}
+
+.team-box {
+  text-align: left;
+  border-radius: 15px;
+  width: 60vw;
+  padding-top: 2vh;
+  padding-bottom: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-bottom: 4vh;
+}
+
+.team-info-header-line-break {
+  border: 1px solid white;
+  width: 262px;
+  margin-bottom: 5vh;
+}
+
+.team-header-line-break {
+  border: 1px solid white;
+  width: 262px;
+  margin-left: 0;
+}
+
+#red-team-box {
+  background-color: #c39a9a;
+}
+
+#black-team-box {
+  background-color: #8d8d8d;
+}
+
+#cv-team-box {
+  background-color: #8f9fc9f2;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input,
+select {
+  width: 40vw;
+  height: 6vh;
+  border: none;
+  background-color: #d657eb;
+  box-sizing: border-box;
+  margin-bottom: 1vh;
+  border-radius: 15px;
+  font-size: 24px;
+  color: black;
+  padding-left: 1vw;
+}
+
+.small-input {
+  width: 19vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.name-box {
+  background-color: #8ca0d4;
+}
+.message-box {
+  background-color: #8ca0d4;
+  height: 15vh;
+}
+.submit-button {
+  color: white;
+  font-size: 15px;
+  letter-spacing: 20%;
+  width: 13vw;
+  border-radius: 0;
 }
