@@ -11,39 +11,38 @@ import "./App.css";
 import Competition from "./components/Competition";
 
 
-function TitleUpdater() {
-  const location = useLocation(); 
+// function TitleUpdater() {
+//   const location = useLocation(); 
 
-  useEffect(() => {
-    const titleMap = {
-      "/": "Home - WE Autopilot",
-      "/about": "About - WE Autopilot",
-      "/sponsors": "Sponsors - WE Autopilot",
-      "/join": "Join Us - WE Autopilot",
-      "/competition": "Competition - WE Autopilot",
-    };
+//   useEffect(() => {
+//     const titleMap = {
+//       "/": "Home - WE Autopilot",
+//       "/about": "About - WE Autopilot",
+//       "/sponsors": "Sponsors - WE Autopilot",
+//       "/join": "Join Us - WE Autopilot",
+//       "/competition": "Competition - WE Autopilot",
+//     };
 
-    document.title = titleMap[location.pathname] || "WE Autopilot";
-  }, [location.pathname]); 
+//     document.title = titleMap[location.pathname] || "WE Autopilot";
+//   }, [location.pathname]); 
 
-  return null; 
-}
+//   return null; 
+// }
 
 function App() {
-  // useEffect(() => {
-  //   const gradient = new Gradient();
-  //   gradient.initGradient("#gradient-canvas");
-  // }, []);
+  useEffect(() => {
+    const gradient = new Gradient();
+    gradient.initGradient("#gradient-canvas");
+  }, []);
 
   return (
     <div className="app-container">
-      {/* <div id="animated-bg">
+      <div id="animated-bg">
         <canvas id="gradient-canvas" data-transition-in></canvas>
-      </div> */}
+      </div>
 
       <div className="content">
         <Router>
-          <TitleUpdater />
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />

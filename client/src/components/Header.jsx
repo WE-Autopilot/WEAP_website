@@ -8,11 +8,11 @@ function Header() {
   const navRef = useRef();
 
   const handleMenuClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
-      setMenu(false);
-      setIsClosing(false);
-    }, 500);
+    setMenu(false);
+    // setTimeout(() => {
+    //   setMenu(false);
+    //   setIsClosing(false);
+    // }, 500);
   };
 
   onClickOutside(navRef, () => {
@@ -106,6 +106,7 @@ function Header() {
           </li>
         </ul>
       </nav>
+      <img id="headervector" src="/vectors/HeaderVector.svg"></img>
     </header>
   );
 }
