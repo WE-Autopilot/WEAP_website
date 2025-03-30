@@ -6,6 +6,7 @@ import Member2 from "../assets/Member2.webp";
 import Member3 from "../assets/Member3.webp";
 import Member4 from "../assets/Member4.webp";
 import Member5 from "../assets/Member5.webp";
+import Danya from "../assets/Danya.webp";
 import { useEffect, useRef } from "react";
 import { use } from "react";
 
@@ -17,7 +18,7 @@ function About() {
     { id: 3, name: "Hamza Elkababji", role: "Co-Founder, VP Comms", image: Member4 },
     { id: 4, name: "Zain Syed", role: "VP Tech", image: Member5 },
     { id: 5, name: "Ethan Greene", role: "VP Marketing", image: Member2 },
-    { id: 6, name: "Danya Abbas", role: "VP Events", image: Member5 },
+    { id: 6, name: "Danya Abbas", role: "VP Events", image: Danya },
     
     
   ]
