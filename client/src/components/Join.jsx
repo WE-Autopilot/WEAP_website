@@ -74,8 +74,8 @@ function Join() {
           ></input>
           <input type="text" name="email" placeholder="Email"></input>
           <div className="year-section">
-            <select name="year" className="small-input">
-              <option value="" disabled selected>
+            <select name="year" className="small-input" defaultValue={""}>
+              <option value="" disabled>
                 Year
               </option>
             </select>
@@ -86,8 +86,8 @@ function Join() {
               placeholder="Discipline"
             ></input>
           </div>
-          <select name="team" className="small-input">
-            <option value="" disabled selected>
+          <select name="team" className="small-input" defaultValue={""}>
+            <option value="" disabled>
               Team of Interest
             </option>
           </select>
