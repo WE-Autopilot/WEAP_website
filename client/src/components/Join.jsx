@@ -63,43 +63,50 @@ function Join() {
         </div>
       </div>
 
-      <div className="join-form-container">
-        <form className="join-form">
-          <h2 className="form-heading">Get Involved!</h2>
-          <input
-            type="text"
-            className="name-box"
-            name="name"
-            placeholder="Name"
-          ></input>
-          <input type="text" name="email" placeholder="Email"></input>
-          <div className="year-section">
-            <select name="year" className="small-input" defaultValue={""}>
-              <option value="" disabled>
-                Year
-              </option>
-            </select>
-            <input
-              type="text"
-              name="discipline"
-              className="small-input"
-              placeholder="Discipline"
-            ></input>
-          </div>
-          <select name="team" className="small-input" defaultValue={""}>
-            <option value="" disabled>
-              Team of Interest
-            </option>
-          </select>
-          <input
-            type="text"
-            className="message-box"
-            name="message"
-            placeholder="Your Message"
-          ></input>
-          <input type="submit" value="Submit" className="submit-button"></input>
-        </form>
-      </div>
+  
+
+<div className="join-form-container">
+  <form className="join-form">
+    <h2 className="form-heading">Get Involved!</h2>
+    <div className="form-grid">
+      <input
+        type="text"
+        className="name-box"
+        name="name"
+        placeholder="Name"
+      />
+      <input 
+        type="text" 
+        name="email" 
+        placeholder="Email"
+      />
+      <select name="year" defaultValue={""}>
+        <option value="" disabled>
+          Year
+        </option>
+      </select>
+      <input
+        type="text"
+        name="discipline"
+        placeholder="Discipline"
+      />
+      <select name="team" className="full-width" defaultValue={""}>
+        <option value="" disabled>
+          Team of Interest
+        </option>
+      </select>
+      <input
+        type="text"
+        className="message-box full-width"
+        name="message"
+        placeholder="Your Message"
+      />
+    </div>
+    <input type="submit" value="Submit" className="submit-button" />
+  </form>
+</div>
+
+
     </div>
   );
 }
