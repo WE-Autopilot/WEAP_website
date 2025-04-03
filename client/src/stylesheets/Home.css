@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&family=Inter:wght@600&display=swap');
+
+.logo-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(180deg, #6A037B 0%, #102854 100%);
+}
+
+.logo-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+
+.logo-align p {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 36px;
+    font-family: "Jura", serif;
+    text-align: center;
+    background: linear-gradient(90deg, #FFDE38 0%, #EA00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo img {
+    transform: scale(0.8);
+    padding-top: 75px;
+}
+
+.logo h2 {
+    color: #FFDE38;
+    font-size: 89px;
+    margin-bottom: 1%;
+    text-align: center;
+    font-family: 'Jura', sans-serif;
+}
+
+.line {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    max-width: 970px;
+    height: 5px;
+    background: #FFDE38;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 0 20px;
+}
+
+.intro-container {
+    width: 100%;
+    max-width: 976px;
+}
+
+.mission-section,
+.commitments-section {
+    width: 100%;
+    max-width: 976px;
+    margin-bottom: 50px;
+}
+
+.content {
+    width: 100%;
+    max-width: 70vw;
+    height: 318px;
+    margin-top: 50px;
+    background-color: #4a4a4a;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    width: 354px;
+    height: 51px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.divider {
+    width: 60%;
+    height: 0;
+    border: 3px solid #ffffff;
+    margin: 10px 0;
+}
+
+.description {
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #f8f5ff;
+}
+
+/* Polycard Styles */
+.polycard1,
+.polycard2 {
+    width: 100%;
+    max-width: 976px;
+    height: 197px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.mission-shape,
+.commitments-shape {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.left-part,
+.right-part2 {
+    flex: 0.55;
+    height: 100%;
+    background: #ffe561;
+    display: flex;
+    align-items: center;
+}
+
+.left-part {
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+    border-radius: 15px 0 0 15px;
+}
+
+.right-part2 {
+    clip-path: polygon(32% 0%, 100% 0%, 110% 100%, 8% 100%);
+    border-radius: 0 15px 15px 0;
+}
+
+.right-part,
+.left-part2 {
+    flex: 0.45;
+    height: 100%;
+}
+
+.right-part {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
+    border-radius: 0 15px 15px 0;
+    position: relative;
+}
+
+.left-part2 {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 75% 100%);
+    border-radius: 15px 0 0 15px;
+    position: relative;
+}
+
+.right-part::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9b3c93a1;
+    border-radius: 15px;
+}
+
+.left-part2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #102854c9;
+    border-radius: 15px;
+}
+
+.mission-content,
+.commitments-content {
+    width: 100%;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+.mission-content h2,
+.commitments-content h2 {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mission-content p,
+.commitments-content p {
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.commitments-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 20px;
+}
+
+.commitments-content h2,
+.commitments-content p {
+    text-align: right;
+}
+
+.mission-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 20px;
+}
+
+.mission-content h2,
+.mission-content p {
+    text-align: left;
+}
+
+.join-section {
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(0.95deg, #ffffff 1.06%, #102854 160.21%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.ready-to-join {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-title {
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+}
+
+.join-button {
+    width: 175px;
+    height: 48px;
+    background: linear-gradient(118.41deg, #102854 35.65%, #925fbb 100%);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.join-button span {
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    color: white;
+}
+
+/* Image Styles */
+.group-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.learning-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 850px) {
+    .logo h2 {
+        font-size: 3rem;
+    }
+
+    .logo img {
+        transform: scale(0.6);
+        padding-top: 50px;
+    }
+
+    .logo-align p {
+        font-size: 24px;
+    }
+
+    .line {
+        height: 3px;
+    }
+
+    .content {
+        height: auto; 
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+        width: auto; 
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .mission-content h2,
+    .commitments-content h2 {
+        font-size: 18px;
+    }
+
+    .mission-content p,
+    .commitments-content p {
+        font-size: 14px;
+    }
+
+    .join-title {
+        font-size: 36px;
+    }
+
+    .join-button {
+        width: 150px;
+        height: 40px;
+    }
+
+    .join-button span {
+        font-size: 14px;
+    }
+
+    .polycard1,
+    .polycard2 {
+        height: auto; 
+    }
+
+    .mission-shape,
+    .commitments-shape {
+        flex-direction: column; 
+    }
+
+    .left-part,
+    .right-part,
+    .left-part2,
+    .right-part2 {
+        flex: 1; 
+        height: auto; 
+    }
+}
