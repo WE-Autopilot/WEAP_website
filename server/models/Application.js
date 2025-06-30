@@ -23,7 +23,7 @@ const ApplicationSchema = new mongoose.Schema(
     schoolEmail: {
       type: String,
       required: [true, "School email is required"],
-      match: [/^\S+@\S+\.uwo\.ca$/, "Must be a UWO email address"],
+      match: [/@(?:[\w-]+\.)*uwo\.ca$/, "Must be a UWO email address"],
       trim: true,
       lowercase: true,
     },

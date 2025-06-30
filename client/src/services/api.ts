@@ -12,15 +12,11 @@ const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 export const applicationService = {
   /**
    * Submit application form data to the API
-   * @param applicationData Application data to submit
+   * @param formData Application data to submit
    * @returns Promise with submission response
    */
   submitApplication: async (
-    applicationData: ApplicationFormData & {
-      resumeMethod: string;
-      resumeData: string;
-      timestamp: string;
-    }
+    formData: FormData
   ): Promise<SubmissionResponse> => {
     try {
       // If backend is available, submit to real API
@@ -28,10 +24,7 @@ export const applicationService = {
         // Force real API usage when available
         const response = await fetch(`${API_URL}/applications`, {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(applicationData),
+          body: formData,
         });
 
         const data = await response.json();
@@ -53,7 +46,7 @@ export const applicationService = {
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
       // Log the data that would be sent
-      console.log("Application data (simulation):", applicationData);
+      console.log("Application data (simulation):", formData);
 
       // Return success response
       return { success: true };

@@ -10,6 +10,7 @@ const { connectDB } = require("./config/database");
 const { errorHandler } = require("./middleware/errorHandler");
 const { apiLimiter } = require("./middleware/rateLimiter");
 const { sanitizeBody } = require("./middleware/sanitize");
+const path = require("path");
 require("dotenv").config();
 
 // Connect to MongoDB
@@ -71,6 +72,9 @@ app.use(
 
 // Apply rate limiting to API routes
 app.use("/api", apiLimiter);
+
+// Add this line to serve files from the 'uploads' directory
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Integrate enhanced features
 const enhance = require("./enhance");

@@ -99,8 +99,20 @@ exports.createApplication = async (req, res) => {
       });
     }
 
-    // Create application in database
-    const application = await Application.create(req.body);
+    // Construct the data to be saved from both the text fields and the file
+    const applicationData = {
+      ...req.body, // Text fields are in req.body
+    };
+
+    // If a file was uploaded, add its path to the data
+    if (req.file) {
+      applicationData.resumeData = req.file.path; // e.g., 'uploads/resume-1627843... .pdf'
+    } else if (req.body.resumeMethod === "link") {
+      applicationData.resumeData = req.body.resumeUrl;
+    }
+
+    // Create application in database with the file path
+    const application = await Application.create(applicationData);
 
     res.status(201).json({
       success: true,

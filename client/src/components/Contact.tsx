@@ -44,7 +44,7 @@ const validationRules: ValidationRules = {
   schoolEmail: (t) => ({
     required: t("error.required"),
     pattern: {
-      value: /^[^\s@]+@[^\s@]+\.uwo\.ca$/,
+      value: /^[^\s@]+@(?:[\w-]+\.)*uwo\.ca$/,
       message: t("error.schoolEmail"),
     },
   }),
@@ -637,23 +637,34 @@ const Contact: FC = (): ReactElement => {
     trackEvent("Form", "submit_start", "Application Form");
 
     try {
-      // 1. Validate form data
+      // 1. Validate form data (client-side)
       validateFormData(data);
 
-      // 2. Create application data object
-      const applicationData = {
-        ...data,
-        resumeMethod: uploadMethod,
-        resumeData:
-          uploadMethod === "file" ? selectedFile!.name : data.resumeUrl || "",
-        timestamp: new Date().toISOString(),
-      };
+      // 2. Create a FormData object to send the file
+      const formData = new FormData();
 
-      // 3. Submit to API service
-      await applicationService.submitApplication(applicationData);
+      // Append all the text fields from your form
+      Object.keys(data).forEach((key) => {
+        formData.append(key, data[key as keyof ApplicationFormData] as string);
+      });
 
-      // For demo purposes only - in production this would be handled server-side
-      createDemoCSVDownload(applicationData);
+      // Append the other necessary fields
+      formData.append("resumeMethod", uploadMethod);
+      formData.append("timestamp", new Date().toISOString());
+
+      // IMPORTANT: Append the actual file if it exists
+      if (uploadMethod === "file" && selectedFile) {
+        formData.append("resume", selectedFile, selectedFile.name);
+      } else if (uploadMethod === "link" && data.resumeUrl) {
+        formData.append("resumeData", data.resumeUrl);
+      }
+
+      // 3. Submit the FormData to the API service
+      const response = await applicationService.submitApplication(formData);
+
+      if (!response.success) {
+        throw new Error(response.message || "Error submitting application");
+      }
 
       // 4. Track successful submission
       const completionTime = performance.now() - startTime;

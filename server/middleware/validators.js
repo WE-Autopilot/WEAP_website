@@ -29,7 +29,7 @@ exports.applicationValidationRules = [
     .withMessage("School email is required")
     .isEmail()
     .withMessage("Invalid email address")
-    .matches(/\.uwo\.ca$/)
+    .matches(/@(?:[\w-]+\.)*uwo\.ca$/)
     .withMessage("Must be a UWO email address")
     .normalizeEmail(),
 
