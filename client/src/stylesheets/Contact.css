@@ -1,0 +1,497 @@
+.application-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #213862;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.application-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.form-section {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 12px;
+}
+
+.form-description {
+  margin-bottom: 24px;
+  color: #e0e0e0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #e0e0e0;
+}
+
+.required {
+  color: #ff7e7e;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #7b4aa3;
+  box-shadow: 0 0 0 2px rgba(123, 74, 163, 0.2);
+}
+
+input.error,
+select.error {
+  border-color: #ff5252;
+  background-color: rgba(255, 82, 82, 0.05);
+}
+
+.error-message {
+  color: #ff5252;
+  font-size: 14px;
+  margin-top: 6px;
+  display: block;
+}
+
+/* Team selection styles */
+.team-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.team-card {
+  flex: 1;
+  min-width: calc(33.333% - 20px);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.team-card.selected {
+  border-color: #7b4aa3;
+  background-color: rgba(123, 74, 163, 0.15);
+}
+
+.team-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.team-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.team-card p {
+  margin: 0;
+  font-size: 15px;
+  color: #e0e0e0;
+  line-height: 1.5;
+}
+
+/* File upload styles */
+.file-upload {
+  margin-bottom: 30px;
+}
+
+.file-upload-container {
+  position: relative;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.file-upload-container:hover {
+  border-color: #7b4aa3;
+  background-color: rgba(123, 74, 163, 0.08);
+}
+
+.file-upload-container.empty {
+  padding: 40px 20px;
+}
+
+.file-upload-container input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-upload-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.browse-button {
+  background-color: #7b4aa3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.browse-button:hover {
+  background-color: #8f5cba;
+}
+
+.remove-file {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  transition: all 0.3s ease;
+}
+
+.remove-file:hover {
+  background: rgba(255, 82, 82, 0.8);
+}
+
+.file-hint, .url-hint {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+button[type="submit"] {
+  background: linear-gradient(150deg, #102854, #7b4aa3);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+button[type="submit"].submitting {
+  background: #4a5568;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success and error messages */
+.submit-success,
+.submit-error {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  animation: fadeIn 0.5s ease;
+}
+
+.submit-success {
+  border-left: 4px solid #48bb78;
+}
+
+.submit-error {
+  border-left: 4px solid #f56565;
+}
+
+.success-icon,
+.error-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.success-icon {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: #48bb78;
+}
+
+.error-icon {
+  background-color: rgba(245, 101, 101, 0.2);
+  color: #f56565;
+}
+
+.success-message h3,
+.error-message h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.success-message p,
+.error-message p {
+  margin: 0;
+  color: #e0e0e0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Upload options styles */
+.upload-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.upload-option {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.upload-option:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.upload-option.active {
+  background-color: rgba(123, 74, 163, 0.3);
+  border-color: #7b4aa3;
+}
+
+/* Saved data notice */
+.saved-data-notice {
+  background-color: rgba(66, 153, 225, 0.15);
+  border-left: 4px solid #4299e1;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: slideIn 0.5s ease;
+}
+
+.notice-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-content p {
+  margin: 0 0 10px 0;
+}
+
+.notice-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.notice-actions button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.notice-actions button:first-child {
+  background-color: rgba(66, 153, 225, 0.3);
+}
+
+.notice-actions button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.notice-actions button:first-child:hover {
+  background-color: rgba(66, 153, 225, 0.4);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Screenreader-only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .team-selection {
+    flex-direction: column;
+  }
+  
+  .team-card {
+    min-width: 100%;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .application-container {
+    margin: 20px 10px;
+    padding: 15px;
+  }
+  
+  .form-section {
+    padding: 16px;
+  }
+  
+  .application-container h2 {
+    font-size: 1.8rem;
+  }
+  
+  .form-section h3 {
+    font-size: 1.3rem;
+  }
+} 

@@ -35,12 +35,15 @@
   gap: 4rem;
   margin: 0;
   padding: 0;
+  position: relative;
+  z-index: 5; /* Ensure links are above vector */
 }
 
 .links li a {
   position: relative;
   display: inline-block; 
-  text-decoration: none; 
+  text-decoration: none;
+  z-index: 2; /* Ensure links are clickable */
 }
 
 
@@ -72,9 +75,16 @@
   position: relative;
 }
 
+/* Add special styling for application link to make sure it's clickable */
+.application-link a {
+  position: relative;
+  z-index: 10;
+}
+
 .nav {
     position: absolute;
     padding-left: 15%;
+    z-index: 2; /* Ensure nav is above vector */
 }
 
 #headervector {
@@ -82,7 +92,9 @@
   top: 0;
   right: 0;
   height: 100%;     
-  width: auto;      
+  width: auto;
+  z-index: 1; /* Place vector behind links */
+  pointer-events: none; /* Prevent vector from catching clicks */
 }
 
 .fimenu {
