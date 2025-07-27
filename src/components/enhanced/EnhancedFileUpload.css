@@ -1,0 +1,147 @@
+/* Enhanced File Upload Component Styles */
+
+.enhanced-file-upload {
+  margin-bottom: 20px;
+}
+
+.enhanced-file-upload__label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.enhanced-file-upload__required {
+  color: #e53e3e;
+  margin-left: 4px;
+}
+
+.enhanced-file-upload__input-container {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 16px;
+  background-color: #f8fafc;
+}
+
+.enhanced-file-upload__input {
+  display: none;
+}
+
+.enhanced-file-upload__controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.enhanced-file-upload__button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.enhanced-file-upload__button:hover {
+  background-color: #0052a3;
+}
+
+.enhanced-file-upload__button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.enhanced-file-upload__clear-button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background-color 0.2s;
+}
+
+.enhanced-file-upload__clear-button:hover {
+  background-color: #c53030;
+}
+
+.enhanced-file-upload__clear-button:disabled {
+  background-color: #fc8181;
+  cursor: not-allowed;
+}
+
+.enhanced-file-upload__file-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 8px;
+  background-color: #ebf8ff;
+  border-radius: 4px;
+}
+
+.enhanced-file-upload__file-name {
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.enhanced-file-upload__progress-container {
+  height: 8px;
+  background-color: #e2e8f0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.enhanced-file-upload__progress-bar {
+  height: 100%;
+  background-color: #48bb78;
+  transition: width 0.3s ease;
+}
+
+.enhanced-file-upload__progress-text {
+  display: block;
+  font-size: 12px;
+  color: #4a5568;
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.enhanced-file-upload__error-message {
+  color: #e53e3e;
+  font-size: 14px;
+  margin-top: 8px;
+  padding: 8px;
+  background-color: #fff5f5;
+  border-radius: 4px;
+  border-left: 3px solid #e53e3e;
+}
+
+.enhanced-file-upload__preview {
+  margin-top: 12px;
+  padding: 12px;
+  background-color: #f7fafc;
+  border-radius: 4px;
+  border: 1px dashed #cbd5e0;
+}
+
+.enhanced-file-upload__pdf-preview,
+.enhanced-file-upload__doc-preview {
+  font-size: 14px;
+  color: #4a5568;
+  text-align: center;
+}
+
+.enhanced-file-upload__help-text {
+  font-size: 12px;
+  color: #718096;
+  margin-top: 8px;
+}
+
+.enhanced-file-upload--error .enhanced-file-upload__input-container {
+  border-color: #e53e3e;
+  background-color: #fff5f5;
+} 

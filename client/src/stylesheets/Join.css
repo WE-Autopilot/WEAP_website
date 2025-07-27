@@ -36,6 +36,14 @@ h2 {
   padding-left: 2vw;
   padding-right: 2vw;
   text-align: center;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.join-info-box.animate-slide-in {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .header-line-break {
@@ -57,6 +65,12 @@ h2 {
   padding-left: 2vw;
   padding-right: 2vw;
   margin-bottom: 4vh;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.6s ease;
+}
+
+.team-box.animate-fade-in {
+  opacity: 1;
 }
 
 .team-heading {
@@ -79,14 +93,255 @@ h2 {
 
 #red-team-box {
   background-color: #c39a9a;
+  transition-delay: 0.1s;
 }
 
 #black-team-box {
   background-color: #8d8d8d;
+  transition-delay: 0.3s;
 }
 
 #cv-team-box {
   background-color: #8f9fc9f2;
+  transition-delay: 0.5s;
+}
+
+/* CV Team Container with Team Lead */
+.cv-team-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4vh;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.6s ease;
+  transition-delay: 0.5s;
+}
+
+.cv-team-container.animate-fade-in {
+  opacity: 1;
+}
+
+/* Team Lead Card Styling */
+.team-lead-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+  animation: slideInFromLeft 0.8s ease-out forwards;
+  animation-delay: 0.7s;
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cv-team-container.animate-fade-in .team-lead-card {
+  opacity: 1;
+}
+
+.team-lead-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.team-lead-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-color: #DCA621;
+}
+
+.team-lead-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder for when image is not available */
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150deg, #102854, #7b4aa3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.team-lead-name {
+  color: #DCA621;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.team-lead-role {
+  color: #e1e1e1;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+/* Adjust CV team box to not take full width when next to team lead */
+.cv-team-container .team-box {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* CTA Container styles */
+.join-cta-container {
+  background: rgba(123, 74, 163, 0.8);
+  border-radius: 15px;
+  width: 60vw;
+  padding: 40px;
+  margin: 30px 0 60px 0;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.join-cta-container.animate-slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.join-cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.join-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.apply-button {
+  display: inline-block;
+  background: linear-gradient(150deg, #102854, #7b4aa3);
+  color: white;
+  text-decoration: none;
+  padding: 14px 32px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.apply-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(150deg, #1a3a6e, #8f5cba);
+}
+
+.apply-button:active {
+  transform: translateY(-1px);
+}
+
+/* Language switcher */
+.language-switcher {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.language-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-button:hover,
+.language-button.active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .join-info-box, 
+  .team-box, 
+  .join-cta-container {
+    width: 90vw;
+  }
+  
+  .join-info {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  
+  .apply-button {
+    width: 100%;
+    padding: 12px 0;
+  }
+  
+  .join-cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .join-cta-content p {
+    font-size: 1rem;
+  }
+  
+  /* CV Team responsive layout */
+  .cv-team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-lead-card {
+    margin-bottom: 2rem;
+    animation-delay: 0.5s;
+  }
+  
+  .cv-team-container .team-box {
+    width: 90vw;
+  }
+  
+  .team-lead-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .team-lead-name {
+    font-size: 1.3rem;
+  }
+  
+  .team-lead-role {
+    font-size: 0.9rem;
+  }
 }
 
 .join-form {
@@ -130,8 +385,6 @@ select {
   box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-
-
 .full-width{
   grid-column: span 2;
   margin-top: 10px;
@@ -154,4 +407,99 @@ select {
   border-radius: 0;
   background: linear-gradient(150deg, #102854, #7b4aa3);
   box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* CV Team Container with Team Lead */
+.cv-team-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4vh;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.6s ease;
+  transition-delay: 0.5s;
+}
+
+.cv-team-container.animate-fade-in {
+  opacity: 1;
+}
+
+/* Team Lead Card Styling */
+.team-lead-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+.team-lead-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 4px solid white;
+  transition: transform 0.3s ease;
+}
+
+.team-lead-image:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 20px 40px rgba(0, 0, 0, 0.3);
+  border: 4px solid #DCA621;
+}
+
+.team-lead-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder for when image is not available */
+.placeholder-image {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(150deg, #102854, #7b4aa3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.team-lead-name {
+  color: #DCA621;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.team-lead-role {
+  color: #e1e1e1;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Adjust CV team box to not take full width when next to team lead */
+.cv-team-container .team-box {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .cv-team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .team-lead-card {
+    margin-bottom: 2rem;
+  }
+  
+  .cv-team-container .team-box {
+    width: 90vw;
+  }
 }
