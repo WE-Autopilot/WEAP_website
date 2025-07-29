@@ -9,15 +9,10 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ className = "" }) => {
   const [isMenu, setMenu] = useState<boolean>(false);
-  const [isClosing, setIsClosing] = useState<boolean>(false);
   const navRef = useRef<HTMLElement>(null);
 
   const handleMenuClose = () => {
-    setIsClosing(true);
-    setTimeout(() => {
       setMenu(false);
-      setIsClosing(false);
-    }, 500);
   };
 
   onClickOutside(navRef, () => {
@@ -80,7 +75,7 @@ const Header: React.FC<HeaderProps> = ({ className = "" }) => {
 
       <nav
         ref={navRef}
-        className={`nav ${isMenu ? "open" : ""} ${isClosing ? " closing" : ""}`}
+        className={`nav ${isMenu ? "open" : ""}`}
       >
         <ul className="links">
           <li>
@@ -103,16 +98,16 @@ const Header: React.FC<HeaderProps> = ({ className = "" }) => {
               Teams
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/competition" onClick={handleMenuClose}>
               Competition
             </Link>
-          </li>
-          <li className="application-link">
+          </li> */}
+          {/* <li className="application-link">
             <Link to="/contact" onClick={handleMenuClose}>
               Application
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <img
