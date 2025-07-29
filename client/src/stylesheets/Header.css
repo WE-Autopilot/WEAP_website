@@ -83,7 +83,7 @@
 
 .nav {
     position: absolute;
-    padding-left: 15%;
+    padding-left: 25%;
     z-index: 2; /* Ensure nav is above vector */
 }
 
@@ -150,41 +150,36 @@
     z-index: 10;
   }
   .nav.open {
-    display: block;
-    position: absolute;
+    display: flex;
     top: 0px;
     left: 0;
     width: 100%;
     background: rgba(255, 255, 255);
-    padding-top: 0;
+    padding-top: 5;
   }
 
   .links{
     gap: 2rem;
   }
-  .nav .links {
-    display: none;
-    flex-direction: column;
-    /* background:#e1e1e1; */
-    background: rgba(255, 255, 255);
-    box-shadow: 0px 4px 4px 5px rgba(0, 0, 0, 0.25);
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    opacity: 0;
-  }
+.nav .links {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
 
-  .nav.open .links {
-    display: flex;
-    /* display on top */
-    z-index: 99;
-    animation: slideDown 0.5s ease forwards;
-  }
-  .nav.closing .links {
-    animation: slideUp 0.5s ease forwards;
-  }
+.nav.open .links {
+  padding: 2rem 0;
+  opacity: 1;
+  pointer-events: auto;
+  animation: slideDown 0.5s ease forwards;
+}
+
+/* .nav.closing .links {
+  opacity: 0;
+  pointer-events: none;
+  animation: slideUp 0.5s ease forwards;
+} */
 
 }
