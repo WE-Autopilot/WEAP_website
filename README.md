@@ -1,25 +1,30 @@
-## Setting the project up
+# WEAP Website
 
-1.  <b>Clone the repo</b>
-   ```sh
-   git clone https://github.com/WE-Autopilot/WEAP_website.git
-   ```
-2. <b>Set up the dependencies</b> </br>
-    Install the client dependencies </br>
-```
-   cd WEAP_website
-   cd client
-   npm install
-   cd ..
-```
-  Install the server dependencies
-```
-   cd server 
-   npm install
-   cd ..
+## Overview
+This is the official repository for the WEAP Website project.
+
+## Project Structure
+- `/client` - Frontend React application
+- `/server` - Backend Node.js API server
+- `/docs` - Project documentation
+- `/config` - Configuration and setup scripts
+- `/uploads` - Uploaded files storage
+
+## Documentation
+- [Integration Guide](./docs/integration/GUIDE.md)
+- [API Documentation](./docs/api)
+- [Component Documentation](./docs/components)
+
+## Getting Started
+Run the start script to set up the environment and verify the integration:
+
+```bash
+./start.sh
 ```
 
-3. <b>Run the development </b>
-```
-  npm run dev
-```
+## Development
+- Start the client: `cd client && npm run dev`
+- Start the server: `cd server && npm run dev`
+
+## Security
+This project follows industry-standard security practices. See the [Integration Guide](./docs/integration/GUIDE.md) for details.

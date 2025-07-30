@@ -1,0 +1,26 @@
+.required-mark {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Style adjustments for different field types */
+.form-check {
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.form-check-label {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+/* Focus styles for checkbox and radio inputs */
+.form-check-input:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+} 

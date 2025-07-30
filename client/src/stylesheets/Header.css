@@ -1,24 +1,185 @@
-.Header{
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+.Header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  /* height: auto; */
+}
+
+.links {
+  list-style: none;
+  font-size: 24px;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5; /* Ensure links are above vector */
+}
+
+.links li a {
+  position: relative;
+  display: inline-block; 
+  text-decoration: none;
+  z-index: 2; /* Ensure links are clickable */
+}
+
+
+.links li a::before,
+.links li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #1b489c, #9708e4);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: center; 
+  transition: transform 0.4s ease-out;
+}
+
+
+.links li a:hover::before,
+.links li a:hover::after,
+
+.links li a:focus-visible::before,
+.links li a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.links li {
+  margin-right: 2em;
+  position: relative;
+}
+
+/* Add special styling for application link to make sure it's clickable */
+.application-link a {
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+    position: absolute;
+    padding-left: 25%;
+    z-index: 2; /* Ensure nav is above vector */
+}
+
+#headervector {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;     
+  width: auto;
+  z-index: 1; /* Place vector behind links */
+  pointer-events: none; /* Prevent vector from catching clicks */
+}
+
+.fimenu {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.fimenu:focus,
+.fimenu:active {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.menuRotate {
+  transition: transform 400ms ease;
+}
+.menuRotate.active {
+  transform: rotate(180deg);
+}
+
+.fimenu svg line {
+  transition: all 400ms ease;
+  stroke-dasharray: 40 121;
+  stroke-linecap: round;
+}
+
+.line1 {
+  transition: all 400ms ease;
+}
+@media only screen and (max-width: 1366px) {
+  .nav {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    margin-right: 6em;
+    border: none;
+    outline: none;
+    z-index: 10;
+  }
+  .nav.open {
+    display: flex;
+    top: 0px;
+    left: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* height: auto; */
-}
+    background: rgba(255, 255, 255);
+    padding-top: 5;
+  }
 
-.links{
-    list-style: none;
-    font-size: 24px;
-    display: flex;
-    flex-wrap: wrap;
+  .links{
     gap: 2rem;
-    margin: 0;
-    padding: 0;
+  }
+.nav .links {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
 }
 
-.links li{
-    margin-right: 4em;
+.nav.open .links {
+  padding: 2rem 0;
+  opacity: 1;
+  pointer-events: auto;
+  animation: slideDown 0.5s ease forwards;
 }
 
-.nav{
-}  
+/* .nav.closing .links {
+  opacity: 0;
+  pointer-events: none;
+  animation: slideUp 0.5s ease forwards;
+} */
+
+}
