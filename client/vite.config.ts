@@ -17,5 +17,11 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@assets": path.resolve(__dirname, "./src/assets")
     }
-  }
+  },
+  server: {
+    headers: {
+      // prevent index.html from ever being cached
+      'Cache-Control': 'no-store, max-age=0, must-revalidate',
+    },
+  },
 });

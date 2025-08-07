@@ -1,103 +1,411 @@
-.intro-container {
-  background: rgba(213, 208, 208, 0.6);
-  text-align: left; /* Keep text alignment to the left */
-  margin-top: 12%;
-  margin-bottom: 20%;
-  padding: 4%;
-  box-shadow: 0px 4px 2.3px 4px rgba(0, 0, 0, 0.25),
-    0px 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;700&family=Inter:wght@600&display=swap');
 
-.intro-container .content {
-  max-width: 800px;
-  text-align: left;
-  max-width: fit-content;
-}
-.intro-container h2 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(to right, #6b047b, #d49b27);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-
-}
-
-.intro-container p {
-  font-size: 3rem;
-  line-height: 1;
-  max-width: 100rem;
-}
-
-/* Remove the rule that hides logo text for smaller screens */
-@media only screen and (max-width: 850px) {
-    .intro-container h2 {
-      font-size: 3rem;
-    }
-
-    .intro-container p {
-      font-size: 1rem;
-    }
-
-
-    .logo h2,
-    .line {
-      display: none;
-    }
-  }
-
-.logo-card{
+.logo-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30vh;
+    height: 60vh;
     width: 100%;
-    color: #FFDE38;
-    margin-top: 10%;
-  }
+    background: linear-gradient(180deg, #6A037B 0%, #102854 100%);
+}
 
-  .logo-align{
+.logo-align {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
-  }
-  .logo-align p{
+}
+
+.logo-align p {
     margin-top: 15px;
     font-weight: 700;
     font-size: 36px;
     font-family: "Jura", serif;
     text-align: center;
-  }
+    background: linear-gradient(90deg, #FFDE38 0%, #EA00FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
 
-  .logo{
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-  }
+}
 
-  .logo img {
+.logo img {
     transform: scale(0.8);
     padding-top: 75px;
-  }
+}
 
-  .logo h2{
+.logo h2 {
     color: #FFDE38;
     font-size: 89px;
     margin-bottom: 1%;
     text-align: center;
-  }
+    font-family: 'Jura', sans-serif;
+}
 
-  .line{
+.line {
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
     max-width: 970px;
     height: 5px;
     background: #FFDE38;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
-  }
-  
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* POLYCARD STYLING */
+
+/* INTRO CARD */
+
+.intro-section {
+    width: 100%;
+    max-width: 976px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #102854;
+    padding: 0 20px;
+}
+
+.intro-content {
+    height: 318px;
+    background-image: url("/home/IMG_4885.jpeg");
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.intro-overlay{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(16, 40, 84, 0.6);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.title {
+    width: 354px;
+    height: 51px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.divider {
+    width: 60%;
+    height: 0;
+    border: 3px solid #ffffff;
+    margin: 10px 0;
+    z-index: 1;
+}
+
+.description {
+    font-family: 'Jura', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #f8f5ff;
+    z-index: 1;
+}
+
+/* MISSION AND COMMITMENTS SECTION */
+
+.mission-section,
+.commitments-section {
+    width: 100%;
+    max-width: 976px;
+    margin-bottom: 50px;
+}
+
+
+/* SHAPE SECTION */
+.polycard1,
+.polycard2 {
+    width: 100%;
+    max-width: 976px;
+    height: 197px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.mission-shape,
+.commitments-shape {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+}
+
+.mission-content {
+    width: 80%;
+}
+
+.mission-content h2,
+.commitments-content h2 {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.mission-content p,
+.commitments-content p {
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.mission-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-content h2,
+.mission-content p {
+    text-align: left;
+    padding-left: 3%;
+    color: #6b047b;
+}
+
+.commitments-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    margin-left: 18%;
+}
+
+.commitments-content h2,
+.commitments-content p {
+    text-align: right;
+    color: #6b047b;
+}
+
+.leftpoly
+{
+    width: 575px;
+    background-color: #FFE561;
+    height: 213px;
+    clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 65% 0%);
+    margin-right: -170px;
+}
+
+.rightpoly
+{
+    width: 575px;
+    height: 100%;
+    height: 213px;
+    clip-path: polygon(100% 100%, 35% 100%, 0% 0%, 100% 0%);
+    margin: 0 auto;
+    background-image: url("/home/IMG_5393.jpeg");
+    background-size: cover;
+    background-position: -34% 59%;  
+    background-repeat: no-repeat;
+}
+
+.leftpoly2{
+    width: 575px;
+    height: 213px;
+    clip-path: polygon(65% 100%, 0% 100%, 0% 0%, 100% 0%);
+    margin-right: -170px;
+    background-image: url("/home/IMG_5372.png");
+    background-size: cover;
+    background-position: -34% 59%;  
+    background-repeat: no-repeat;
+}
+
+.rightpoly2
+{
+    width: 575px;
+    height: 100%;
+    height: 213px;
+    clip-path: polygon(100% 100%, 0% 100%, 35% 0%, 100% 0%);
+    margin: 0 auto;
+    background-color: #FFE561;
+}
+
+.color-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(155, 60, 147, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flt_svg {
+    visibility: hidden; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.box_parent
+{
+    filter: url('#flt_tag');
+    height: 213px
+}
+
+/* .join-section {
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(0.95deg, #ffffff 1.06%, #102854 160.21%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.ready-to-join {
+    width: 100%;
+    padding: 30px 0;
+    margin: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.join-title {
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+}
+
+.join-button {
+    width: 175px;
+    height: 48px;
+    background: linear-gradient(118.41deg, #102854 35.65%, #925fbb 100%);
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.join-button span {
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    color: white;
+} */
+
+/* Image Styles */
+.group-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.learning-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 850px) {
+    .logo h2 {
+        font-size: 3rem;
+    }
+
+    .logo img {
+        transform: scale(0.6);
+    }
+
+    .logo-align p {
+        font-size: 24px;
+    }
+
+    .line {
+        height: 3px;
+    }
+
+    .content {
+        height: auto; 
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 24px;
+        width: auto; 
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .mission-content h2,
+    .commitments-content h2 {
+        font-size: 18px;
+    }
+
+    .mission-content p,
+    .commitments-content p {
+        font-size: 14px;
+    }
+
+    .join-title {
+        font-size: 36px;
+    }
+
+    .join-button {
+        width: 150px;
+        height: 40px;
+    }
+
+    .join-button span {
+        font-size: 14px;
+    }
+
+    .polycard1,
+    .polycard2 {
+        height: auto; 
+    }
+
+    .mission-shape,
+    .commitments-shape {
+        flex-direction: column; 
+    }
+
+    .left-part,
+    .right-part,
+    .left-part2,
+    .right-part2 {
+        flex: 1; 
+        height: auto; 
+    }
+}
