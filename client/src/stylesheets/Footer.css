@@ -4,6 +4,26 @@
   display: flex;
   flex-direction: row;
   bottom: 0;
+  position: relative;
+}
+
+#animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#gradient-canvas {
+  width: 100%;
+  height: 100%;
+  --gradient-color-1: #d49b27;
+  --gradient-color-2: #6b047b;
+  --gradient-color-3: #a45c4b;
+  --gradient-color-4: #923f59;
 }
 
 #FooterLeft {

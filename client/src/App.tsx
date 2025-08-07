@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./components/Contact";
 import Join from "./components/Join";
@@ -7,7 +6,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
 import Footer from "./components/Footer";
-import { Gradient } from "./assets/Gradient";
 import "./App.css";
 
 /**
@@ -15,18 +13,10 @@ import "./App.css";
  * @returns The main application component
  */
 const App: React.FC = () => {
-  // Initialize the gradient background
-  useEffect(() => {
-    const gradient = new Gradient();
-    gradient.initGradient("#gradient-canvas");
-  }, []);
 
   return (
     <Router>
       <div className="app">
-        <div id="animated-bg">
-          <canvas id="gradient-canvas"></canvas>
-        </div>
         <Header />
 
           <main className="content">
