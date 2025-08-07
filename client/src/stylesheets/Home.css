@@ -60,41 +60,47 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.home-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #ffffff;
-    padding: 0 20px;
-}
+/* POLYCARD STYLING */
+
+/* INTRO CARD */
 
 .intro-section {
     width: 100%;
     max-width: 976px;
 }
 
-.mission-section,
-.commitments-section {
-    width: 100%;
-    max-width: 976px;
-    margin-bottom: 50px;
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #102854;
+    padding: 0 20px;
 }
 
-.content {
-    width: 100%;
-    max-width: 70vw;
+.intro-content {
     height: 318px;
-    margin-top: 50px;
-    background-color: #4a4a4a;
+    background-image: url("/home/IMG_4885.jpeg");
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.intro-overlay{
+  position: absolute;
+  inset: 0;
+  background-color: rgba(16, 40, 84, 0.6);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .title {
@@ -105,6 +111,7 @@
     font-size: 32px;
     color: #ffffff;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 .divider {
@@ -112,6 +119,7 @@
     height: 0;
     border: 3px solid #ffffff;
     margin: 10px 0;
+    z-index: 1;
 }
 
 .description {
@@ -119,9 +127,20 @@
     font-weight: 300;
     font-size: 20px;
     color: #f8f5ff;
+    z-index: 1;
 }
 
-/* Polycard Styles */
+/* MISSION AND COMMITMENTS SECTION */
+
+.mission-section,
+.commitments-section {
+    width: 100%;
+    max-width: 976px;
+    margin-bottom: 50px;
+}
+
+
+/* SHAPE SECTION */
 .polycard1,
 .polycard2 {
     width: 100%;
@@ -139,73 +158,8 @@
     margin-top: 40px;
 }
 
-.left-part,
-.right-part2 {
-    flex: 0.55;
-    height: 100%;
-    background: #ffe561;
-    display: flex;
-    align-items: center;
-}
-
-.left-part {
-    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
-    border-radius: 15px 0 0 15px;
-    margin-right: 0px;
-}
-
-.right-part2 {
-    clip-path: polygon(32% 0%, 100% 0%, 110% 100%, 8% 100%);
-    border-radius: 0 15px 15px 0;
-}
-
-.right-part,
-.left-part2 {
-    flex: 0.45;
-    height: 100%;
-}
-
-.right-part {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
-    border-radius: 0 15px 15px 0;
-    position: relative;
-    margin-right: 0px;
-}
-
-
-.left-part2 {
-    clip-path: polygon(100% 0, 0 0, 0 100%, 75% 100%);
-    border-radius: 15px 0 0 15px;
-    position: relative;
-}
-
-.right-part::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #9b3c93a1;
-    border-radius: 15px;
-}
-
-.left-part2::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #102854c9;
-    border-radius: 15px;
-}
-
-.mission-content,
-.commitments-content {
-    width: 100%;
-    padding: 0 30px;
-    box-sizing: border-box;
+.mission-content {
+    width: 80%;
 }
 
 .mission-content h2,
@@ -223,37 +177,99 @@
     font-weight: 300;
 }
 
-.commitments-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    height: 100%;
-    padding: 20px;
-}
-
-.commitments-content h2,
-.commitments-content p {
-    text-align: right;
-}
-
 .mission-content {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    height: 100%;
-    padding: 20px;
 }
 
 .mission-content h2,
 .mission-content p {
     text-align: left;
+    padding-left: 3%;
+    color: #6b047b;
 }
 
-.join-section {
+.commitments-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 80%;
+    margin-left: 18%;
+}
+
+.commitments-content h2,
+.commitments-content p {
+    text-align: right;
+    color: #6b047b;
+}
+
+.leftpoly
+{
+    width: 575px;
+    background-color: #FFE561;
+    height: 213px;
+    clip-path: polygon(100% 100%, 0% 100%, 0% 0%, 65% 0%);
+    margin-right: -170px;
+}
+
+.rightpoly
+{
+    width: 575px;
+    height: 100%;
+    height: 213px;
+    clip-path: polygon(100% 100%, 35% 100%, 0% 0%, 100% 0%);
+    margin: 0 auto;
+    background-image: url("/home/IMG_5393.jpeg");
+    background-size: cover;
+    background-position: -34% 59%;  
+    background-repeat: no-repeat;
+}
+
+.leftpoly2{
+    width: 575px;
+    height: 213px;
+    clip-path: polygon(65% 100%, 0% 100%, 0% 0%, 100% 0%);
+    margin-right: -170px;
+    background-image: url("/home/IMG_5372.png");
+    background-size: cover;
+    background-position: -34% 59%;  
+    background-repeat: no-repeat;
+}
+
+.rightpoly2
+{
+    width: 575px;
+    height: 100%;
+    height: 213px;
+    clip-path: polygon(100% 100%, 0% 100%, 35% 0%, 100% 0%);
+    margin: 0 auto;
+    background-color: #FFE561;
+}
+
+.color-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(155, 60, 147, 0.6);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.flt_svg {
+    visibility: hidden; 
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+
+.box_parent
+{
+    filter: url('#flt_tag');
+    height: 213px
+}
+
+/* .join-section {
     width: 100%;
     height: 20vh;
     background: linear-gradient(0.95deg, #ffffff 1.06%, #102854 160.21%);
@@ -303,7 +319,7 @@
     font-size: 15px;
     letter-spacing: 0.2em;
     color: white;
-}
+} */
 
 /* Image Styles */
 .group-img {

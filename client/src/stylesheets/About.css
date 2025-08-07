@@ -76,7 +76,10 @@ h2{
 
 /* Basic card styling */
 .card {
-  background-color: white;
+  background-image: url("/home/IMG_4507.jpg");
+  background-size: cover;
+  background-position: center;  
+  background-repeat: no-repeat;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -94,14 +97,14 @@ h2{
 
 /* Card title styling */
 .card h2 {
-  color: #333;
+  color: #000000;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 /* Card content styling */
 .card p {
-  color: #666;
+  color: #000000;
   line-height: 1.5;
 }
 

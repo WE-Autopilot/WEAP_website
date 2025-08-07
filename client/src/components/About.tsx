@@ -11,7 +11,7 @@ import Tygo from "../assets/Tygo.jpg";
 import Obaid from "../assets/Obaid.jpg";
 import RedTeamLead from "../assets/RedTeamLead.jpg";
 import BlackTeamLead from "../assets/Ian.jpg";
-import { useEffect, useRef, memo } from "react";
+import { useEffect, memo } from "react";
 
 // TeamMember component for better performance
 const TeamMember = memo(({ member, isTeamLead }: {member: any; isTeamLead: boolean}) => {
@@ -176,7 +176,7 @@ function About() {
           </div>
 
           {/* Card 2 */}
-          <div className="card">
+          {/* <div className="card">
             <h2>Why WEAP?</h2>
             <p>
               Welcome to the offical Western Engineering AutoPilot Website! We
@@ -185,7 +185,7 @@ function About() {
               free to explore everything, from our current endeavors, to futre
               aspirations.
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="Members-container">
           <h2>Meet Our Team</h2>

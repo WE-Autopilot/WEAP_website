@@ -3,11 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Contact from "./components/Contact";
 import Join from "./components/Join";
 import Header from "./components/Header";
-import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./components/Home";
 import About from "./components/About";
 import Sponsors from "./components/Sponsors";
-import Competition from "./components/Competition";
 import Footer from "./components/Footer";
 import { Gradient } from "./assets/Gradient";
 import "./App.css";
@@ -30,7 +28,7 @@ const App: React.FC = () => {
           <canvas id="gradient-canvas"></canvas>
         </div>
         <Header />
-        <ErrorBoundary>
+
           <main className="content">
             <Routes>
               <Route path="/contact" element={<Contact />} />
@@ -41,7 +39,7 @@ const App: React.FC = () => {
               <Route path="/" element={<Home />} />
             </Routes>
           </main>
-        </ErrorBoundary>
+
         <Footer />
       </div>
     </Router>
