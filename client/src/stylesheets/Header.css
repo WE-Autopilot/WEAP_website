@@ -83,7 +83,7 @@
 
 .nav {
     position: absolute;
-    padding-left: 25%;
+    padding-left: 35%;
     z-index: 2; /* Ensure nav is above vector */
 }
 

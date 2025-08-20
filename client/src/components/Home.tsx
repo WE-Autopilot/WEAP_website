@@ -38,10 +38,17 @@ function Home() {
               <div className="box_parent">
                 <div className="leftpoly">
                   <div className="mission-content">
-                    <h2>Our Mission</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing.
-                      Lorem ipsum dolor sit amet, consectetur adipiscing.
+                    <h2 className="left-mission-header">Our Mission</h2>
+                    <p className="left-mission-p">To establish Western Engineering as a
+                        centre for autonomous vehicle
+                        innovation led by students. By
+                        creating an environment which cultivates the skill, creative thinking,
+                        and engineering brilliance of our
+                        members, we hope to represent our
+                        university on a national and
+                        worldwide scale and ultimately
+                        influence the direction of
+                        autonomous systems.
                     </p>
                   </div>
                 </div>
@@ -78,9 +85,9 @@ function Home() {
                 <div className="rightpoly2">
                     <div className="commitments-content">
                       <h2>Our Commitments</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing.
+                      <p>We’re here for our members, sponsors, and partners at every stage of our mission; 
+                        delivering learning opportunities for members, visibility and access to industry-honed talent for sponsors, 
+                        and leading-edge technology for partners.
                       </p>
                     </div>
                 </div>
