@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ className = "" }) => {
           </li>
           <li>
             <Link className="nav-link" to="/about" onClick={handleMenuClose}>
-              President | Vice President's
+              About
             </Link>
           </li>
           <li>

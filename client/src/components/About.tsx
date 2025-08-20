@@ -57,16 +57,16 @@ function About() {
   const teamMembers = [
     {
       id: 1,
-      name: "Aly Ashour",
+      name: "Ali Elgalad",
       role: "Co-Founder, President",
-      image: Member3,
+      image: Member1,
       level: LEADERSHIP_LEVELS.PRESIDENT,
     },
     {
       id: 2,
-      name: "Ali Elgalad",
+      name: "Aly Ashour",
       role: "Co-Founder, VP Finance",
-      image: Member1,
+      image: Member3,
       level: LEADERSHIP_LEVELS.CO_FOUNDER,
     },
     {
@@ -164,7 +164,7 @@ function About() {
       <div className="about-content">
         <div className="cards-container">
           {/* Card 1 */}
-          <div className="card">
+          {/* <div className="card">
             <h2>Our Start</h2>
             <p>
               Welcome to the offical Western Engineering AutoPilot Website! We
@@ -173,7 +173,7 @@ function About() {
               free to explore everything, from our current endeavors, to futre
               aspirations.
             </p>
-          </div>
+          </div> */}
 
           {/* Card 2 */}
           {/* <div className="card">
@@ -188,7 +188,9 @@ function About() {
           </div> */}
         </div>
         <div className="Members-container">
-          <h2>Meet Our Team</h2>
+          <div className="about-title">
+            <h1>Meet Our Team</h1>
+          </div>
 
           <div className="team-tree">
             {/* Top level - President */}
